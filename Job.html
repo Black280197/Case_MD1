@@ -10,12 +10,21 @@
             <h1>Công việc nào sẽ phù hợp với bạn</h1>
             <h2>Hãy chọn một trong các công việc dưới đây và chúng tôi sẽ khai sáng cho bạn</h2>
             <!--Đưa ra các ảnh với mỗi ảnh gắn với một link liên kết, khi bấm vào sẽ chạy xuống dưới trang-->
-            <a href="#" onclick="duDoan(doctor)"><img src="#" alt=""></a>
+            <a href="#Gess" onclick="duDoan(doctor)"><img src="#" alt=""></a>
         </div>
-        <div>
-            <p>Đây là chỗ dự đoán việc làm</p>
-            <img src="" alt="Ảnh 1">
-            <img src="" alt="Ảnh 2">
+
+
+        <div id="Gess">
+            <p id="MD"></p>
+            <button type="button" value="0"><a href="#" id="link01" onclick=""><img id="anh01" src="" alt="Ảnh 1"></a></button>
+            <button type="button" value="0"><a href="#" id="link01"><img id="anh02" src="" alt="Ảnh 2"></a></button>
+        </div>
+        <br><br><br><br><br><br><br>
+
+
+        <div id="result">
+            <p>RESULT</p>
+            <img src="" alt="ResultPhoto">
         </div>
         <script>
 <!--Tạo một đối tượng để dự đoán các trường hợp sẽ xảy ra, ví dụ như Bác sĩ sẽ được tạo ra gồm các thuộc tính-->
@@ -175,6 +184,14 @@
                     }
                 },
 
+            }
+            function duDoan(job, dem, ) {
+                let carrer = job;
+                if (job.hasOwnPropert("result")) {
+                    document.getElementById("MD").innerHTML = this.text;
+                    document.getElementById("anh01").src = this.0.photo;
+                    document.getElementById("anh02").src = this.1.photo;
+                }
             }
 
 
